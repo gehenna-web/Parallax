@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PARALLAX — Field Notes from the Visible Universe</title>
+<meta name="description" content="A blog about galaxies, stars, and planets — dispatches from the edge of the visible universe.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" id="brandMark" aria-hidden="true"></span>
+      <span class="brand-text">PARALLAX</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#dispatches" class="nav-link">Dispatches</a>
+      <a href="#planets" class="nav-link">Planetary Log</a>
+      <a href="#stars" class="nav-link">Stellar Lifecycle</a>
+      <a href="#subscribe" class="nav-link">Subscribe</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <canvas id="galaxyCanvas" class="galaxy-canvas"></canvas>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow mono">01.997 &mdash; observation log open</p>
+    <h1 class="hero-title">Dispatches from<br>the edge of the<br><em>visible universe.</em></h1>
+    <p class="hero-sub">Field notes on galaxies, the lives of stars, and the planets that orbit them — written for anyone who has ever looked up and wanted the long answer.</p>
+    <div class="hero-actions">
+      <a href="#dispatches" class="btn btn-primary">Read the latest entry</a>
+      <a href="#planets" class="btn btn-ghost">Explore the planets</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="mono">SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================== INTRO STRIP ===================== -->
+<section class="intro-strip">
+  <p>Every object below carries a real designation &mdash; the way astronomers actually catalogue the sky. <span class="mono">M</span> for Messier, <span class="mono">NGC</span> for New General Catalogue. We borrow the convention because it says something true: nothing here is filed at random.</p>
+</section>
+
+<!-- ===================== DISPATCHES ===================== -->
+<section class="dispatches" id="dispatches">
+  <div class="section-head">
+    <p class="eyebrow mono">02 &mdash; dispatches</p>
+    <h2>Latest entries</h2>
+    <div class="filter-row" id="filterRow">
+      <button class="filter-chip is-active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="galaxy">Galaxies</button>
+      <button class="filter-chip" data-filter="star">Stars</button>
+      <button class="filter-chip" data-filter="planet">Planets</button>
+    </div>
+  </div>
+
+  <div class="article-grid" id="articleGrid">
+
+    <article class="article-card" data-category="galaxy" data-catalog="M-104">
+      <div class="card-media" data-scene="spiral"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/M104_ngc4594_sombrero_galaxy_hi-res.jpg?width=700" alt="The Sombrero Galaxy (M104) seen nearly edge-on, with its bright core and dark dust lane" loading="lazy"><span class="card-credit mono">NASA / ESA / Hubble</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">M-104 &middot; GALAXY</p>
+        <h3>The Sombrero's dust lane hides a supermassive secret</h3>
+        <p class="card-excerpt">Twenty-eight million light-years away, a nearly edge-on spiral wears a ring of dust like a brim. Behind it: a black hole a thousand times heavier than our galaxy's own.</p>
+        <button class="card-read" data-article="sombrero">Read entry &rarr;</button>
+      </div>
+    </article>
+
+    <article class="article-card" data-category="star" data-catalog="V-838">
+      <div class="card-media" data-scene="nova"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/V838_Mon_HST.jpg?width=700" alt="Hubble image of the expanding light echo around the star V838 Monocerotis" loading="lazy"><span class="card-credit mono">NASA / ESA / Hubble</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">V-838 &middot; STAR</p>
+        <h3>The star that brightened 600 times over &mdash; and no one knows why</h3>
+        <p class="card-excerpt">In 2002, an ordinary red star in Monoceros swelled into one of the largest known, then faded. Its light echo is still unfolding through surrounding dust, years after the fact.</p>
+        <button class="card-read" data-article="v838">Read entry &rarr;</button>
+      </div>
+    </article>
+
+    <article class="article-card" data-category="planet" data-catalog="P-07">
+      <div class="card-media" data-scene="ring"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saturn_from_Cassini_Orbiter_%282007-01-19%29.jpg?width=700" alt="Saturn and its ring system photographed by the Cassini spacecraft" loading="lazy"><span class="card-credit mono">NASA / JPL-Caltech</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">P-07 &middot; PLANET</p>
+        <h3>Saturn's rings are younger than the dinosaurs</h3>
+        <p class="card-excerpt">The rings may have formed just 100 to 400 million years ago &mdash; a blink, geologically. Cassini's final plunge in 2017 gave us the data to make the case.</p>
+        <button class="card-read" data-article="saturn">Read entry &rarr;</button>
+      </div>
+    </article>
+
+    <article class="article-card" data-category="galaxy" data-catalog="NGC-4414">
+      <div class="card-media" data-scene="spiral-slow"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/NGC_4414_%28NASA-med%29.jpg?width=700" alt="The spiral galaxy NGC 4414 photographed by the Hubble Space Telescope" loading="lazy"><span class="card-credit mono">NASA / ESA / Hubble</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">NGC-4414 &middot; GALAXY</p>
+        <h3>How to weigh a galaxy you can never touch</h3>
+        <p class="card-excerpt">Astronomers infer mass from motion: how fast stars orbit the core tells you how much unseen matter is pulling on them. Most of it, it turns out, is dark.</p>
+        <button class="card-read" data-article="weighing">Read entry &rarr;</button>
+      </div>
+    </article>
+
+    <article class="article-card" data-category="star" data-catalog="B-33">
+      <div class="card-media" data-scene="nebula"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Horsehead-Hubble.jpg?width=700" alt="The Horsehead Nebula, a dark column of dust silhouetted against glowing gas" loading="lazy"><span class="card-credit mono">NASA / ESA / Hubble</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">B-33 &middot; STAR NURSERY</p>
+        <h3>Inside the Horsehead: a star factory in silhouette</h3>
+        <p class="card-excerpt">The Horsehead Nebula is dark, not bright &mdash; a cold column of dust blocking the glow behind it, and one of the more ordinary places a star can be born.</p>
+        <button class="card-read" data-article="horsehead">Read entry &rarr;</button>
+      </div>
+    </article>
+
+    <article class="article-card" data-category="planet" data-catalog="P-04">
+      <div class="card-media" data-scene="dust"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/OSIRIS_Mars_true_color.jpg?width=700" alt="Mars in true color, photographed by the OSIRIS instrument on the Rosetta spacecraft" loading="lazy"><span class="card-credit mono">ESA / OSIRIS Team</span></div>
+      <div class="card-body">
+        <p class="card-eyebrow mono">P-04 &middot; PLANET</p>
+        <h3>Mars lost an ocean's worth of water. Where did it go?</h3>
+        <p class="card-excerpt">Ancient shorelines and river deltas suggest Mars was once wet. Most of that water didn't boil away &mdash; it's likely locked in the crust itself.</p>
+        <button class="card-read" data-article="mars">Read entry &rarr;</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== STELLAR LIFECYCLE ===================== -->
+<section class="lifecycle" id="stars">
+  <div class="section-head">
+    <p class="eyebrow mono">03 &mdash; stellar lifecycle</p>
+    <h2>Every star follows one of a few paths</h2>
+    <p class="section-sub">Mass decides the ending. Drag the marker to see how a star's starting weight determines whether it fades quietly or tears itself apart.</p>
+  </div>
+
+  <div class="lifecycle-widget">
+    <input type="range" min="0" max="100" value="20" id="massSlider" class="mass-slider" aria-label="Star mass slider">
+    <div class="lifecycle-track" id="lifecycleTrack">
+      <div class="stage-marker" id="stageMarker"></div>
+    </div>
+    <div class="lifecycle-readout">
+      <p class="mono" id="massReadout">0.4 solar masses</p>
+      <h3 id="stageTitle">Red Dwarf</h3>
+      <p id="stageDesc">Burns its hydrogen so slowly it could outlive the universe as we understand it &mdash; some estimates run past ten trillion years.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLANETARY LOG ===================== -->
+<section class="planets" id="planets">
+  <div class="section-head">
+    <p class="eyebrow mono">04 &mdash; planetary log</p>
+    <h2>Eight worlds, one star</h2>
+    <p class="section-sub">Select a planet to open its field notes.</p>
+  </div>
+
+  <div class="planet-rail" id="planetRail">
+    <button class="planet-chip" data-planet="mercury" style="--planet-color:#B8ADA3">Mercury</button>
+    <button class="planet-chip" data-planet="venus" style="--planet-color:#E6C27A">Venus</button>
+    <button class="planet-chip is-active" data-planet="earth" style="--planet-color:#4FB6D9">Earth</button>
+    <button class="planet-chip" data-planet="mars" style="--planet-color:#C1613F">Mars</button>
+    <button class="planet-chip" data-planet="jupiter" style="--planet-color:#D9A066">Jupiter</button>
+    <button class="planet-chip" data-planet="saturn" style="--planet-color:#E8C888">Saturn</button>
+    <button class="planet-chip" data-planet="uranus" style="--planet-color:#8FD6D6">Uranus</button>
+    <button class="planet-chip" data-planet="neptune" style="--planet-color:#5C7CE0">Neptune</button>
+  </div>
+
+  <div class="planet-detail" id="planetDetail">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<!-- ===================== SUBSCRIBE ===================== -->
+<section class="subscribe" id="subscribe">
+  <div class="subscribe-inner">
+    <p class="eyebrow mono">05 &mdash; transmission</p>
+    <h2>One dispatch a week. No noise.</h2>
+    <p class="section-sub">A single field note, every Sunday, on whatever's overhead. Unsubscribe whenever you like.</p>
+    <form class="subscribe-form" id="subscribeForm">
+      <input type="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="subscribe-note mono" id="subscribeNote">&nbsp;</p>
+  </div>
+</section>
+
+<!-- ===================== ARTICLE MODAL ===================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">PARALLAX</span>
+      <p>Written under dark skies. Best read the same way.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#dispatches">Dispatches</a>
+      <a href="#stars">Stellar Lifecycle</a>
+      <a href="#planets">Planetary Log</a>
+      <a href="#subscribe">Subscribe</a>
+    </div>
+    <p class="footer-coords mono">34.0522&deg; N, 118.2437&deg; W &mdash; and everywhere else the sky is visible</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/galaxy.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
